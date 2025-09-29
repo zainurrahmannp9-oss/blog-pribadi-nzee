@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Mode Gelap / Terang</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-brand">🌙 Nzee Project</a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="#profile">Profil</a>
+        <a href="https://ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+        <a href="https://www.instagram.com/ndzn_071/" target="_blank">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar card" aria-label="Sidebar profil" id="profile">
+      <div class="topbar">
+        <div class="title">Halo, Nzy</div>
+        <button id="themeToggle" class="toggle" aria-pressed="false" title="Toggle theme">
+          <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:none">
+            <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <svg id="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <img class="avatar" id="profilePic" src="/img/profile.jpg" alt="Avatar">
+      <h3 class="name" id="profileName">Zainurrahman Nanda Prasetyanta</h3>
+      <div class="role">Web Developer · UI Enthusiast</div>
+      <p class="bio" id="profileBio">program study: Teknik Informatika    
+        Nim: 24416255201040 
+        email: if24.zainurrahmanprasetyanta@mhs.ac.id.</p>
+
+      </div>
+
+      <div style="margin-top:18px">
+        <button class="btn primary" id="openAdd">+ Tambah Postingan</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section class="card hero" aria-label="Hero">
+        <div class="hero-left">
+          <h2>Selamat datang!</h2>
+          <p class="muted">Eksplor desain modern dengan toggle mode gelap/terang — dan coba tambah posting di bawah.</p>
+        </div>
+        <div>
+          <button class="cta" id="sampleCTa">Lihat Contoh</button>
+        </div>
+      </section>
+
+      <section class="card" aria-label="Postingan">
+        <div style="display:flex;align-items:center;gap:12px">
+          <h3 style="margin:0">Posting Terbaru</h3>
+          <div class="muted" style="margin-left:6px" id="postsCount"></div>
+          <div class="right muted">Disimpan lokal (localStorage)</div>
+        </div>
+
+        <div id="postsWrap" style="margin-top:12px">
+          <div class="posts-grid" id="postsGrid"></div>
+          <div id="emptyHint" class="empty" style="display:none">Belum ada posting. Klik "Tambah Postingan" untuk membuat.</div>
+        </div>
+
+        <!-- Form tambah -->
+        <div id="formArea" style="margin-top:12px;display:none">
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <input id="titleInp" class="input" placeholder="Judul posting" />
+            <input id="thumbInp" class="input" placeholder="URL thumbnail (opsional)" />
+          </div>
+          <div style="margin-top:8px">
+            <textarea id="contentInp" placeholder="Isi singkat..." class="input"></textarea>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn primary" id="savePost">Simpan Post</button>
+            <button class="btn" id="cancelPost">Batal</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Nzee project — Demo statis • Mode gelap/terang
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
